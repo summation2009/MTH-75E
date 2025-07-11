@@ -11,6 +11,7 @@
 #include "Wire.h"
 
 #include <Fonts/FreeSansBold12pt7b.h>
+#include <Fonts/FreeSansBold9pt7b.h>
 
 #define PIN_RGB 48
 #define NUMPIXELS 1
@@ -97,7 +98,6 @@ void setup()
 void loop()
 {
 
-  //64x64
   matrix->fillScreen(myRED);
   matrix->color565(0, 0, 0);
   matrix->setFont(&FreeSansBold12pt7b);
@@ -108,9 +108,9 @@ void loop()
 
   matrix->fillScreen(myGREEN);
   matrix->color565(0, 0, 0);
-  matrix->setFont(&FreeSansBold12pt7b);
+  matrix->setFont(&FreeSansBold9pt7b);
   matrix->setTextSize(1);
-  matrix->setCursor(6, 43);
+  matrix->setCursor(0, 38);
   matrix->print("GREEN");
   delay(1000);
 
@@ -118,7 +118,7 @@ void loop()
   matrix->color565(0, 0, 0);
   matrix->setFont(&FreeSansBold12pt7b);
   matrix->setTextSize(1);
-  matrix->setCursor(6, 43);
+  matrix->setCursor(-1, 40);
   matrix->print("BLUE");
   delay(1000);
 
@@ -126,8 +126,10 @@ void loop()
   matrix->color565(0, 0, 0);
   matrix->setFont(&FreeSansBold12pt7b);
   matrix->setTextSize(1);
-  matrix->setCursor(6, 43);
-  matrix->print("YELLOW");
+  matrix->setCursor(10, 28);
+  matrix->print("YEL");
+  matrix->setCursor(2, 50);
+  matrix->print("LOW");
   delay(1000);
 
 }
